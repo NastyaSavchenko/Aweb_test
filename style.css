@@ -1,0 +1,189 @@
+/* Базові стилі */
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #212121;
+  background-color: #dedbdbb1;
+  font-family: "League Spartan", sans-serif;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;
+}
+
+.hidden-title {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-title {
+  margin-bottom: 30px;
+  color: #0a0f4f;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+nav {
+  position: relative;
+  padding: 40px 40px;
+  background-color: #5a8eac96;
+  box-shadow: 0 0 13px 3px #1d0750;
+  z-index: 1;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-list__item {
+  list-style: none;
+}
+
+.nav-list__link {
+  color: #0a0f4f;
+  font-weight: 700;
+  font-size: 24px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-list__link::before,
+.nav-list__link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-list__link::before {
+  left: 50%;
+}
+
+.nav-list__link::after {
+  right: 50%;
+}
+
+.nav-list__link:hover::before,
+.nav-list__link:hover::after,
+.nav-list__link:focus::before,
+.nav-list__link:focus::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-list__link:hover,
+.nav-list__link:focus {
+  color: #ffffff;
+}
+
+.hero-box {
+  width: 100%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  background-color: var(--backgrount-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.869),
+      rgba(47, 48, 58, 0.753)
+    ),
+    url(./img/natyazhna-stelya.jpg);
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-box {
+    height: 1000px;
+  }
+}
+
+.hero {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 695px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
